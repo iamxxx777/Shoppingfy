@@ -1,0 +1,126 @@
+.empty_cart {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty_cart h3 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.edit_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.edit_btns button {
+    border-radius: 12px;
+    font-size: 16px;
+    color: inherit;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #34333A;
+    width: 117.67px;
+    height: 58.44px;
+    transition: 0.4s linear;
+}
+
+.edit_btns button:hover {
+    border: solid 0.1rem #BDBDBD;
+}
+
+.edit_btns .complete {
+    background: #1976cc;
+    color: #fff;
+    margin-left: 8px;
+}
+
+.edit_btns .complete {
+    opacity: 0.7;
+}
+
+.edit_category {
+    margin-bottom: 1.5rem;
+}
+
+.edit_category h2 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: #828282;
+    margin-bottom: 1rem;
+}
+
+.edit_item {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr;
+    gap: 3px;
+}
+
+.edit_item input {
+    border: 2px solid #F9A109;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background-color: transparent;
+}
+
+.edit_item label {
+    position: relative;
+}
+
+.edit_form label input {
+    visibility: hidden;/* <-- Hide the default checkbox. The rest is to hide and allow tabbing, which display:none prevents */
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+.edit_form label span {/* <-- Style the artificial checkbox */
+    height: 20px;
+    width: 20px;
+    border: 0.1rem solid #F9A109;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+[type=checkbox]:checked + span {/* <-- Style its checked state */
+    background: black;
+}
+
+.edit_items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.edit_items p {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.edit_items p:nth-child(2) {
+    transition: 0.3s ease-in;
+    border: solid 1px #F9A109;
+    border-radius: 24px;
+    margin-right: 4px;
+    width: 68px;
+    height: 32px;
+    padding-top: 6px;
+    color: #F9A109;    
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}

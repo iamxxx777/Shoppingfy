@@ -1,0 +1,27 @@
+{
+  "name": "shoppify",
+  "version": "1.0.0",
+  "description": "Shoppify allows you to take your shopping list wherever you go",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client"
+  },
+  "keywords": [
+    "Shoppify",
+    "React",
+    "Node",
+    "MongoDB"
+  ],
+  "author": "Dayo-Ajobiewe Hope",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

@@ -1,0 +1,124 @@
+.new_item {
+    padding: 2rem 1rem;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.new_item::-webkit-scrollbar {
+    display: none;
+}
+
+.new_item h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+
+small {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form_control label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #34333A;
+    margin-bottom: 0.5rem;
+}
+
+.form_control label:hover {
+    color: #F9A109;
+}
+
+.form_control input,
+.form_control textarea {
+    max-width: 309.89px;
+    width: 100%;
+    height: 54.25px;
+    border: 1px solid #BDBDBD;
+    outline: none;
+    font-family: inherit;
+    border-radius: 12px;
+    transition: 0.3 linear;
+    padding: 0 0.7rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+}
+
+.form_control input:hover,
+.form_control textarea:hover,
+.form_control input:focus,
+.form_control textarea:focus {
+    border: 1px solid #F9A109;
+}
+
+.form_control textarea {
+    height: 110px;
+    padding: 0.7rem;
+    resize: none;
+}
+
+.form_control input::placeholder,
+.form_control textarea::placeholder {
+    color: #BDBDBD;
+    font-size: 15px;
+}
+
+
+.add_item_btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.add_item_btns button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #34333A;
+    width: 87.35px;
+    height: 51.25px;
+    border-radius: 12px;
+    transition: 0.3s linear;
+    border: solid 1px #BDBDBD;
+}
+
+.add_item_btns button:hover {
+    background-color: #fff;
+    border: solid 1px #F9A109;
+}
+
+.add_item_btns .save {
+    background-color: #F9A109;
+    color: #fff;
+    border: none;
+    margin-left: 1rem;
+} 
+
+.add_item_btns .save:hover {
+    opacity: 0.7;
+    background-color: #F9A109;
+    border: none;
+}
+
+@media (min-width: 601px) {
+    .new_item {
+        padding: 2rem;
+    }
+}

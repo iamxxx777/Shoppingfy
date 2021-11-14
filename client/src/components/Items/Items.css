@@ -1,0 +1,159 @@
+.main {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.main_container {
+    width: 100%;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.header h1 span {
+    color: #F9A109;
+}
+
+.search_form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.search_form form {
+    max-width: 275px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-right: 7px;
+}
+
+.search_form form input {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding-left: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #666666;
+}
+
+.search_form form input::placeholder {
+    color: #666666;
+}
+
+.search_form form label {
+    color: #34333A;
+    font-weight: 700;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+
+.categories {
+    width: 100%;
+    margin: 0 6px;
+    margin-top: 2rem;
+}
+
+.category {
+    margin-bottom: 1.5rem;
+}
+
+.category h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 1rem;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-right: 8px;
+}
+
+.item {
+    background-color: #fff;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 1rem 0.7rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 5px;
+    height: fit-content;
+    margin-bottom: 8px;
+}
+
+.item h5 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.item button {
+    color: #C1C1C4;
+    font-weight: 700;
+}
+
+@media (min-width: 601px) {
+    .main {
+        padding: 1.5rem 2rem;
+    }
+    .header {
+        grid-template-columns: 1.3fr 1fr;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    .search_form {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .category h2 {
+        font-size: 18px;
+    }
+    .items {
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .categories {
+        margin-top: 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .main {
+        padding: 1.5rem 4rem;
+    }
+    .items {
+        grid-template-columns: repeat(4, 1fr);
+        padding-right: 8px;
+    }
+    .item h5 {
+        font-size: 17px;
+    }
+}
