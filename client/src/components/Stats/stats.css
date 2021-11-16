@@ -5,7 +5,7 @@
     overflow-y: scroll;
 }
 
-.item_stats {
+.items_stats {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -15,14 +15,14 @@
 
 .stat_category h2 {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
     margin-bottom: 1.5rem;
 }
 
 .stat_item {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .stat_head {
@@ -38,10 +38,10 @@
     line-height: 17px;
 }
 
-.stat_head h2 {
+.stat_head h4 {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 17px;
     text-align: right;
 }
 
@@ -53,7 +53,6 @@
 }
 
 .stat_range {
-    background: #56CCF2;
     border-radius: 4px;
     height: 100%;
 }
@@ -61,8 +60,12 @@
 
 
 @media (min-width: 601px) {
-    .item_stats {
+    .items_stats {
         grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    .stat_category h2 {
+        font-size: 24px;
     }
 }
 

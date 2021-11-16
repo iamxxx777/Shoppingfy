@@ -3,8 +3,10 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { getItemDetails } from "../../redux/actions/itemsAction"
-
 import { addToCart } from "../../redux/actions/cartActions"
+
+import Loading from "../Loading/Loading"
+import Error from "../Error/Error"
 
 import "./AddNewItem.css"
 
@@ -27,8 +29,8 @@ const AddNewItem = ({ click }) => {
 
     return (
         <div className="add_new_item">
-            {loading ? (<h2>Loading...</h2>) : 
-                error ? (<h2>{error}</h2>) : (
+            {loading ? (<Loading />) : 
+                error ? (<Error />) : (
                     <div className="add_container">
                         <button className="back">
                             <Link to="/items" onClick={click}>

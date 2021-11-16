@@ -11,7 +11,7 @@ const HistoryList = ({ list }) => {
             <div className="list_buttons">
                 <div className="list_date">
                     <i className="uil uil-calendar-alt"></i>
-                    <span><Moment format="MMM DD, YYYY">{list.updatedAt}</Moment></span>
+                    <span><Moment format="MMM DD, YYYY">{list.createdAt}</Moment></span>
                 </div>
                 <div className="list_status">
                     <div className={`${list.completed ? "completed" : "cancelled"}`}>{list.completed ? "completed" : "cancelled"}</div>

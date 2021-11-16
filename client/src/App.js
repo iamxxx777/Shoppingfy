@@ -9,6 +9,7 @@ import ItemsScreen from "./screens/Items/ItemsScreen"
 import HistoryScreen from "./screens/History/HistoryScreen"
 import HistoryIdScreen from "./screens/HistoryId/HistoryIdScreen"
 import StatsScreen from "./screens/Stats/statsScreen"
+import NotFound from "./screens/404/404"
 
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path={"/history"}> <HistoryScreen showModal={() => setModal(true)} /> </Route>
           <Route path={"/list/:id"}> <HistoryIdScreen showModal={() => setModal(true)} /> </Route>
           <Route path={"/stats"}> <StatsScreen showModal={() => setModal(true)} /> </Route>
+          <Route path={"/404"}> <NotFound /> </Route>
           <Route path={"/"}> <Redirect from="/" to="/items" /> </Route>
           <Redirect from="*" to="/404" />
         </Switch>

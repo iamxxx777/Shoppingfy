@@ -7,6 +7,8 @@ import { getStats } from '../../redux/actions/statsActions'
 import NewItem from "../../components/NewItem/NewItem"
 import ShoppingList from "../../components/Cart/ShopingList"
 import Stats from "../../components/Stats/Stats"
+import Loading from '../../components/Loading/Loading'
+import Error from '../../components/Error/Error'
 
 import "./statsScreen.css"
 
@@ -21,15 +23,13 @@ const StatsScreen = ({ showModal }) => {
         dispatch(getStats());
     }, [dispatch]);
 
-    console.log(stats);
 
     return (
         <div className="history_container">
             {
-                loading ? (<h1>Loading...</h1>)
-                : error ? (<h1>{error}</h1>)
-                : 
-                <>
+                loading ? (<Loading />)
+                : error ? (<Error />)
+                : <>
                     <Stats data={stats} />
 
                     {display && <div className="itemz_cart">

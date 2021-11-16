@@ -1,11 +1,11 @@
 import CategoryStats from "./CategoryStats"
 
 const ItemsStats = ({ data }) => {
-    console.log(data);
+    console.log(data.finalNames);
     return (
         <div className="items_stats">
-            <CategoryStats data={data[0]} title="Top Items" />
-            <CategoryStats data={data[1]} title="Top Categories" />
+            <CategoryStats data={data.finalNames} title="Top Items" color="#F9A109" />
+            <CategoryStats data={data.finalCategorys} title="Top Categories" color="#56CCF2" />
         </div>
     )
 }

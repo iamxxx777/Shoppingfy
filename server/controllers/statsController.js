@@ -38,10 +38,26 @@ const getStats = async (req, res) => {
            return 0;
         }
 
-        const finalNames = topNames.sort(compare).slice(topNames.length-3, topNames.length);
-        const finalCategorys = topCategorys.sort(compare).slice(topCategorys.length-3, topCategorys.length);
+        const finalNames = topNames.sort(compare).slice(topNames.length-3, topNames.length).reverse();
+        const finalCategorys = topCategorys.sort(compare).slice(topCategorys.length-3, topCategorys.length).reverse();
 
-        res.status(200).json({finalNames, finalCategorys});
+        // Get month stats
+        const monthsList = await List.find({}).sort({'createdAt': -1});
+
+        const options = { month: 'long' };
+        const months = [...new Set(monthsList.map((list) => new Intl.DateTimeFormat('en-US', options).format(new Date(list.createdAt))))];
+
+        const reducers = (previousValue, currentValue) => previousValue + currentValue.items.length;
+
+        var graph = [];
+
+        months.forEach((month) => {
+            var onee = monthsList.filter((mon) => new Intl.DateTimeFormat('en-US', options).format(new Date(mon.createdAt)) === month).reduce(reducers, 0);
+            graph.push({month: month, value: onee});
+        });
+
+        res.status(200).json({finalNames, finalCategorys, graph});
+
 
     } catch (error) {
         console.error(error);
