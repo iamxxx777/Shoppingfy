@@ -1,10 +1,8 @@
-import { Route, Switch, useRouteMatch } from 'react-router-dom'
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getListDetails } from '../../redux/actions/listActions'
 
-import NewItem from "../../components/NewItem/NewItem"
 import ShoppingList from "../../components/Cart/ShopingList"
 import HistoryItem from "../../components/History/HistoryItem"
 import Loading from "../../components/Loading/Loading"
@@ -13,8 +11,6 @@ import Error from '../../components/Error/Error'
 import "./historyIdScreen.css"
 
 const HistoryIdScreen = ({ showModal }) => {
-    const { path } = useRouteMatch();
-    const [display, setDisplay] = useState(false);
 
     const { id } = useParams();
     const dispatch = useDispatch();
@@ -32,12 +28,9 @@ const HistoryIdScreen = ({ showModal }) => {
                 <>
                     <HistoryItem list={list} />
                     
-                    {display && <div className="itemz_cart">
-                        <Switch>
-                            <Route exact path={`${path}/newitem`}> <NewItem click={() => setDisplay(false)} /> </Route>
-                            <Route exact path={path} > <ShoppingList  showModal={showModal} /> </Route>        
-                        </Switch>
-                    </div>}
+                    <div className="history_cart">
+                        <ShoppingList showModal={showModal} />
+                    </div>
                 </>
             }    
         </div>

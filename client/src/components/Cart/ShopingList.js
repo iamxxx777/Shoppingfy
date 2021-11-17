@@ -11,7 +11,7 @@ import Source from "../../assets/source.svg"
 
 import "./Shoping.css"
 
-const ShoppingList = ({ click, showModal }) => {
+const ShoppingList = ({ mobile, showModal, showDisplay, hideDisplay, hideCart }) => {
 
     const dispatch = useDispatch();
     const { cartItems } = useSelector((state) => state.cart);
@@ -20,19 +20,26 @@ const ShoppingList = ({ click, showModal }) => {
     const [name, setName] = useState("");
     const [currentName, setCurrentName] = useState(currentList.name ? currentList.name : "");
 
+    const addClick = () => {
+        hideCart();
+        showDisplay();
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(newCurrentList(name));
         setName("");
-        click();
+        if(!mobile) {
+            hideDisplay();
+        }
     }
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        console.log("We rann");
         dispatch(updateCurrentList(currentName));
-        console.log("We ran");
-        click();
+        if(!mobile) {
+            hideDisplay();
+        }
     }
 
     
@@ -46,7 +53,7 @@ const ShoppingList = ({ click, showModal }) => {
                         </div>
                         <div className="card_info">
                             <p>Didn't find what you need?</p>
-                            <Link to="/items/newitem" onClick={click}><button>Add item</button></Link>
+                            <Link to="/items/newitem" onClick={() => mobile ? addClick() : null }><button>Add item</button></Link>
                         </div>
                     </div>
                     {cartItems.length > 0 ? (

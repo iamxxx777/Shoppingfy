@@ -2,7 +2,7 @@ const List = require("../models/list");
 
 const getAllLists = async (req, res) => {
     try {
-        const lists = await List.find({});
+        const lists = await List.find({}).sort({createdAt: -1});
         res.status(200).json(lists);
     } catch (error) {
         console.error(error);
@@ -39,7 +39,6 @@ const putList = async (req, res) => {
         const { _id, ...others } = data;
 
         const list = await List.findById(_id);
-        console.log(list);
 
         if(!list) {
             res.status(200).json({message: 'List not found'});

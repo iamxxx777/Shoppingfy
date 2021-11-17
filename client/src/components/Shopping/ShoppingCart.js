@@ -1,4 +1,3 @@
-import { useState } from "react"
 import CartCategory from "../Cart/CartCategory"
 import CartEdit from "./CartEdit"
 

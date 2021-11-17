@@ -5,9 +5,13 @@
     overflow-y: scroll;
 }
 
+.err_container::-webkit-scrollbar {
+    display: none;
+}
+
 .err_page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 50px 0;
@@ -29,9 +33,9 @@
 }
 
 .err-text h4 {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .err-text p {
@@ -50,9 +54,9 @@
     height: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 950px) {
     .err_container {
-        padding: 3rem 4rem;
+        padding: 2rem 2rem;
     }
     .err_page {
         flex-direction: row;

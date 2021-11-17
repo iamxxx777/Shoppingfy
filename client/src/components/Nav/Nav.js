@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 import "./Nav.css"
 
 import Logo from "../../assets/logo.svg"
 
-const Nav = ({ showCart, hideCart }) => {
+const Nav = ({ showCart, hideDisplay }) => {
+
+    const { cartItems } = useSelector((state) => state.cart);
+
     return (
         <nav className="nav">
             <div className="nav_container">
@@ -12,7 +16,7 @@ const Nav = ({ showCart, hideCart }) => {
                 </div>
                 <div className="nav_btns">
                     <div>
-                        <button onClick={hideCart}><Link to="/items"><i className="uil uil-list-ul"></i></Link></button>
+                        <button><Link to="/items" onClick={hideDisplay}><i className="uil uil-list-ul"></i></Link></button>
                     </div>
                         
                     <div>
@@ -27,7 +31,7 @@ const Nav = ({ showCart, hideCart }) => {
 
                 <div className="cart">
                     <button onClick={showCart}>
-                        <span>2</span>
+                        <span>{cartItems.length}</span>
                         <i className="uil uil-shopping-cart-alt"></i>
                     </button>
                 </div>

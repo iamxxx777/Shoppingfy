@@ -1,0 +1,21 @@
+.charts {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.charts h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.charts_container {
+    overflow-x: auto;
+}
+
+.charts_container::-webkit-scrollbar {
+    display: none;
+}

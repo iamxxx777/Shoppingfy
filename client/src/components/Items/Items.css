@@ -145,7 +145,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .main {
         padding: 1.5rem 4rem;
     }
@@ -155,5 +155,21 @@
     }
     .item h5 {
         font-size: 17px;
+    }
+}
+
+@media (max-width: 350px) { 
+    .item {
+        border-radius: 12px;
+        padding: 0.7rem 0.5rem;
+    }
+
+    .item h5 {
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .item button {
+        font-weight: 600;
     }
 }

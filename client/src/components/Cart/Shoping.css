@@ -208,3 +208,11 @@
         font-size: 17px;
     }
 }
+
+
+@media (min-width: 950px) {
+    .cart_items_container {
+        padding: 2rem 2.5rem;
+        padding-bottom: 0;
+    }
+}

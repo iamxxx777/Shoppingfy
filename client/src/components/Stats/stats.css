@@ -5,6 +5,10 @@
     overflow-y: scroll;
 }
 
+.stats::-webkit-scrollbar {
+    display: none;
+}
+
 .items_stats {
     display: grid;
     grid-template-columns: 1fr;
@@ -72,6 +76,13 @@
 @media (min-width: 900px) {
     .stats {
         padding: 2rem 4rem;
+    }
+    .stat_head h3 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .stat_category h2 {
+        font-size: 24px;
     }
 }
 

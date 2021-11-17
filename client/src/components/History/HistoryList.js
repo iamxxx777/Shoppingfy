@@ -14,7 +14,9 @@ const HistoryList = ({ list }) => {
                     <span><Moment format="MMM DD, YYYY">{list.createdAt}</Moment></span>
                 </div>
                 <div className="list_status">
-                    <div className={`${list.completed ? "completed" : "cancelled"}`}>{list.completed ? "completed" : "cancelled"}</div>
+                    <div className={`${list.completed ? "completed" : list.cancelled ? "cancelled" : "new"}`}>
+                        {list.completed ? "completed" : list.cancelled ? "cancelled" : "Not Specified"}
+                    </div>
                 </div>
                 <div className="list_arrow">
                     <button>

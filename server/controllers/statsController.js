@@ -56,6 +56,8 @@ const getStats = async (req, res) => {
             graph.push({month: month, value: onee});
         });
 
+        graph = graph.reverse();
+
         res.status(200).json({finalNames, finalCategorys, graph});
 
 

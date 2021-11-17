@@ -61,7 +61,7 @@ const AddNewItem = ({ click }) => {
                         </div>
 
                         <div className="add_btns">
-                            <button onClick={click}><Link to="/items">cancel</Link></button>
+                            <button><Link to="/items" onClick={click}>cancel</Link></button>
                             <button onClick={handleClick} className="add">Add to list</button>
                         </div>
                     </div>

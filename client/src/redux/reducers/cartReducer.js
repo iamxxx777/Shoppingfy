@@ -39,6 +39,7 @@ export const cartReducer = (state = {cartItems : []}, action) => {
                     } : x)
                 }
             }
+        break;
         case actionTypes.DECREASE_ITEM_QTY:
             const decreaseProduct = action.payload;
 
@@ -52,7 +53,7 @@ export const cartReducer = (state = {cartItems : []}, action) => {
                     } : x)
                 }
             }
-
+        break;
         case actionTypes.UPDATE_CART_SUCCESS:
             const products = action.payload;
                 
@@ -99,29 +100,3 @@ export const saveCartReducer = (state = {savedCart : []}, action) => {
     }
 }
 
-
-// export const updateCartReducer = (state = {updateCart : []}, action) => {
-//     switch(action.type) {
-//         case actionTypes.UPDATE_CART_REQUEST:
-//             return {
-//                 loading: true,
-//                 updateCart: {},
-//             }
-//         case actionTypes.UPDATE_CART_SUCCESS:
-//             const products = action.payload;
-
-
-//             return {
-//                 loading: false,
-//                 updateCart: action.payload,
-//             }
-//         case actionTypes.UPDATE_CART_FAIL:
-//             return {
-//                 loading: false,
-//                 error: action.payload,
-//             }
-//         default: {
-//             return state;
-//         }
-//     }
-// }

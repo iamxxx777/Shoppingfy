@@ -72,7 +72,8 @@
 }
 
 .list_status div {
-    padding: 0.2rem 0.3rem;
+    padding: 0.3rem;
+    min-width: 75px;
     border-radius: 12px;
     font-size: 12px;
     text-align: center;
@@ -80,12 +81,20 @@
 
 .list_status .completed {
     border: 1px solid #56CCF2;
+    background-color: rgba(86, 204, 242, 0.1);
     color: #56CCF2;
 }
 
 .list_status .cancelled {
     border: 1px solid #EB5757;
+    background-color: rgba(235, 87, 87, 0.1);
     color: #EB5757;
+}
+
+.list_status .new {
+    border: 1px solid forestgreen;
+    background-color: rgba(34, 139, 34, 0.15);
+    color: forestgreen;
 }
 
 .list_arrow,
@@ -125,7 +134,10 @@
 
 
 @media (min-width: 768px) {
-    
+    .history {
+        padding: 2rem 4rem;
+    }
+
     .list_arrow,
     .list_status {
         margin-left: 1.5rem;
