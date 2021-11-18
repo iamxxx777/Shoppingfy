@@ -45,7 +45,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Nav showCart={() => setSide(!side)} hideDisplay={() => setDisplay(false)} />
+        <Nav showCart={() => setSide(!side)} hideSide={() => setSide(false)} hideDisplay={() => {setDisplay(false); setSide(false)}} />
         {modal && <Modal click={() => setModal(false)} />}
 
         <div className="body">

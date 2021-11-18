@@ -37,7 +37,8 @@ const NewItem = ({ click }) => {
                 {error && (<small>{error}</small>)}
                 <div className="form_control">
                     <label>Name</label>
-                    <input required 
+                    <input 
+                        required 
                         type="text" 
                         name="name" 
                         placeholder="Enter a name" 

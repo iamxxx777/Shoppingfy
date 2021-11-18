@@ -42,7 +42,7 @@ const AddNewItem = ({ click }) => {
                         </button>
 
                         <div className="item_img">
-                            <img src={item.image} alt={item.name} />
+                            <img src={item.image ? item.image : "https://res.cloudinary.com/iamxxx777/image/upload/v1637264905/Cart_grnm2g.jpg"} alt={item.name} />
                         </div>
 
                         <div className="name">

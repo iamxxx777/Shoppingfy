@@ -29,7 +29,7 @@ const ShoppingList = ({ mobile, showModal, showDisplay, hideDisplay, hideCart })
         e.preventDefault();
         dispatch(newCurrentList(name));
         setName("");
-        if(!mobile) {
+        if(mobile) {
             hideDisplay();
         }
     }
@@ -37,7 +37,7 @@ const ShoppingList = ({ mobile, showModal, showDisplay, hideDisplay, hideCart })
     const handleUpdate = (e) => {
         e.preventDefault();
         dispatch(updateCurrentList(currentName));
-        if(!mobile) {
+        if(mobile) {
             hideDisplay();
         }
     }
@@ -49,7 +49,7 @@ const ShoppingList = ({ mobile, showModal, showDisplay, hideDisplay, hideCart })
                 <div className="cart_items_container">
                     <div className="card">
                         <div className="card_img">
-                            <img src={Source} alt="source image" />
+                            <img src={Source} alt="cart heading" />
                         </div>
                         <div className="card_info">
                             <p>Didn't find what you need?</p>

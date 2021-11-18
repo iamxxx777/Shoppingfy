@@ -15,7 +15,7 @@ const HistoryList = ({ list }) => {
                 </div>
                 <div className="list_status">
                     <div className={`${list.completed ? "completed" : list.cancelled ? "cancelled" : "new"}`}>
-                        {list.completed ? "completed" : list.cancelled ? "cancelled" : "Not Specified"}
+                        {list.completed ? "completed" : list.cancelled ? "cancelled" : "Current"}
                     </div>
                 </div>
                 <div className="list_arrow">

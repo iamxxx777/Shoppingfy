@@ -4,7 +4,7 @@ import "./Nav.css"
 
 import Logo from "../../assets/logo.svg"
 
-const Nav = ({ showCart, hideDisplay }) => {
+const Nav = ({ showCart, hideDisplay, hideSide }) => {
 
     const { cartItems } = useSelector((state) => state.cart);
 
@@ -20,11 +20,11 @@ const Nav = ({ showCart, hideDisplay }) => {
                     </div>
                         
                     <div>
-                        <button><Link to="/history"><i className="uil uil-redo"></i></Link></button>
+                        <button><Link to="/history" onClick={hideSide}><i className="uil uil-redo"></i></Link></button>
                     </div>
                         
                     <div>
-                        <button><Link to="/stats"><i className="uil uil-chart"></i></Link></button>
+                        <button><Link to="/stats" onClick={hideSide}><i className="uil uil-chart"></i></Link></button>
                     </div>
                         
                 </div>

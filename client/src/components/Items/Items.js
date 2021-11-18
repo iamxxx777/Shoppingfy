@@ -17,7 +17,7 @@ const Products = ({ click, items }) => {
                             allows you to take your shopping list wherever you go
                         </h1>
                         <div className="search_form">
-                            <form>
+                            <form onSubmit={(e) => e.preventDefault()}>
                                 <label htmlFor="#"><i className="fa fa-search" aria-hidden="true"></i></label>
                                 <input type="text" name="search" placeholder="search item" />
                             </form>
