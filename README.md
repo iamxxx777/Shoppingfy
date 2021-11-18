@@ -39,7 +39,7 @@ it provides an easy way for you to plan your shopping with style and comfort. Th
 - Save the list with a name
 - Update the name of the list
 - Cancel or complete the list
-- Browse through past lists
+- Browse through previous lists
 - See analytics about previous lists and items (graphs, most selected etc)
 
 
