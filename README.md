@@ -69,6 +69,8 @@ $ npm install
 $ npm start
 ```
 
+Happy Hacking
+
 ## Contact
 
 - Website [your-website.com](https://{your-web-site-link})
