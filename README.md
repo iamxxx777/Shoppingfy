@@ -72,5 +72,5 @@ $ npm start
 ## Contact
 
 - Website [your-website.com](https://{your-web-site-link})
-- GitHub [@iamxxx777](https://{github.com/iamxxx777})
-- Twitter [@dayo_hope](https://{twitter.com/dayo_hope})
+- GitHub [@iamxxx777](https://github.com/iamxxx777)
+- Twitter [@dayo_hope](https://twitter.com/dayo_hope)
