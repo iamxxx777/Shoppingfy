@@ -7,7 +7,6 @@ const Products = ({ click, items }) => {
     const categories = items.map((item) => item.category);
     const uniqueCategories = [...new Set(categories)];
 
-
     return (
         <main className="main">
                 <div className="main_container">
