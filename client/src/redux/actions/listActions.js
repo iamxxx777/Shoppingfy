@@ -1,5 +1,5 @@
 import * as actionTypes from "../constants/listsConstants";
-import axios from "../../axios";
+import axios from "axios";
 
 
 export const getLists = () => async (dispatch) => {

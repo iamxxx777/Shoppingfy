@@ -1,5 +1,5 @@
 import * as actionTypes from "../constants/statsConstants";
-import axios from "../../axios";
+import axios from "axios";
 
 
 export const getStats = () => async (dispatch) => {
