@@ -3,7 +3,9 @@ const Items = require('../models/item');
 
 const getAllItems = async (req, res) => {
     try {
+        console.log("running");
         const items = await Items.find({});
+        console.log(items);
         res.status(200).json(items);
     } catch (error) {
         console.error(error);
