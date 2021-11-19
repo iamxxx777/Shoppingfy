@@ -14,9 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const dirname = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static(path.join(dirname, '/client/build')));
 }
 
 app.use("/api/items", itemsRoute);
