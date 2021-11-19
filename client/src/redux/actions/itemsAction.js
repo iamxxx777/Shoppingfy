@@ -5,11 +5,9 @@ import axios from "axios";
 export const getItems = () => async (dispatch) => {
     try {
         dispatch({type: actionTypes.GET_ITEMS_REQUEST});
-        console.log("calling backend");
 
         const { data } = await axios.get("/api/items/");
-        console.log(data);
-        console.log("called backend");
+        
         dispatch({
             type: actionTypes.GET_ITEMS_SUCCESS,
             payload: data
