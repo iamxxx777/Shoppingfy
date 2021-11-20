@@ -19,9 +19,9 @@ const __currentDirectory = path.resolve();
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__currentDirectory, '/client/build')));
 
-  app.get('*', function (req, res) {
-    res.sendFile(path.resolve(__currentDirectory, 'client', 'build', 'index.html'));
-  });
+  // app.get('*', function (req, res) {
+  //   res.sendFile(path.resolve(__currentDirectory, 'client', 'build', 'index.html'));
+  // });
 }
 
 app.use("/api/items", itemsRoute);
