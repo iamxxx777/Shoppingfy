@@ -26,6 +26,7 @@ const NewItem = ({ click }) => {
 
     useEffect(() => {
         if (newItem.success) {
+            click();
             history.push("/items");
             window.location.reload();
         }
