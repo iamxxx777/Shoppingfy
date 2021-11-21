@@ -14,19 +14,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use("/api/items", itemsRoute);
+app.use("/api/lists", listsRoute);
+app.use("/api/stats", statsRoute);
+
 const __currentDirectory = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__currentDirectory, '/client/build')));
 
-  app.get('*', function (req, res) {
+  app.get('/*', function (req, res) {
     res.sendFile(path.resolve(__currentDirectory, 'client', 'build', 'index.html'));
   });
 }
-
-app.use("/api/items", itemsRoute);
-app.use("/api/lists", listsRoute);
-app.use("/api/stats", statsRoute);
 
 
 const port = process.env.PORT || 5000;

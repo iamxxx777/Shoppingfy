@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Shoppingfy</h1>
+<h1 align="center">Shoppingfy App</h1>
 
 <div align="center">
   <h3>
