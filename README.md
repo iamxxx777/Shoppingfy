@@ -4,11 +4,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://https://shopping-fy.herokuapp.com/">
+    <a href="https://shopping-fy.herokuapp.com/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://https://github.com/iamxxx777/Shoppingfy">
+    <a href="https://github.com/iamxxx777/Shoppingfy">
       Solution
     </a>
   </h3>
