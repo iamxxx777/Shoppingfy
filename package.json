@@ -4,7 +4,7 @@
   "description": "Shoppify allows you to take your shopping list wherever you go",
   "main": "server.js",
   "engines": {
-    "node": "17.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node server/server.js",
